@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travle Ticekt booking</title>
+
+    <!-- daisy ui and tailwind  -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+
+</head>
+
+<body>
+
+    <header class=" bg-slate-300">
+
+        <div class="w-[80%] mx-auto flex justify-evenly items-center">
+            <div class="mr-52">
+                <img class="w-28 h-28" src="./images/logo.png" alt="">
+
+            </div>
+            <div class="flex  items-center">
+                <sup id="shop" class="text-3xl font-semibold text-orange-600">0</sup>
+                <img class="w-8 h-8 mr-3" src="./images/cart.png" alt="">
+                <h2 class="text-xl font-semibold">Home</h2>
+
+            </div>
+            <p class="text-xl font-semibold">Setting</p>
+            <div class="border-[4px] border-stone-500 rounded-[50%] p-[17px]">
+                <img class="w-14 h-14" src="./images/man.png" alt="">
+            </div>
+
+        </div>
+
+    </header>
+
+    <main>
+
+        <section class="flex justify-between items-center my-16 w-[80%] mx-auto">
+            <div>
+                <h1 class="text-5xl font-extrabold">Lets Travel </h1>
+                <p class="mt-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum expedita quae eum
+                    temporibus tenetur porro commodi doloribus omnis explicabo vero?
+                </p>
+                <h3 class="text-2xl font-bold my-5">Total Budget: <span id="budget">8000</span> $
+                </h3>
+            </div>
+            <div>
+                <img class="w-[900px] mx-[80px]" src="./images/banner.png" alt="">
+            </div>
+        </section>
+
+        <!-- card section  -->
+        <section class="flex justify-between">
+            <div class=" allCards">
+                <div class="singleCard flex gap-3 border p-4 ]	w-[340px] rounded-md" style="box-shadow: 3px 5px 5px gray;">
+                    <div>
+                        <img class="w-[170px] h-full rounded-2xl" src="./images/coxBazar.jpg" alt="">
+                    </div>
+                    <div class="flex flex-col ">
+                        <h2 class="text-2xl font-bold">Shajek
+                        </h2>
+                        <p class="text-xl font-medium">Cost: <span>300</span> $</p>
+                        <button class="card-button btn btn-sm bg-slate-300 font-bold mt-4">Add to Cart</button>
+
+                    </div>
+                </div>
+                <div class="singleCard flex gap-3 border p-4 ]	w-[340px] rounded-md" style="box-shadow: 3px 5px 5px gray;">
+                    <div>
+                        <img class="w-[170px] h-full rounded-2xl" src="./images/Dhaka.jpg" alt="">
+                    </div>
+                    <div class="flex flex-col ">
+                        <h2 class="text-2xl font-bold">Dhaka
+                        </h2>
+                        <p class="text-xl font-medium">Cost: <span>400</span> $</p>
+                        <button class="card-button btn btn-sm bg-slate-300 font-bold mt-4">Add to Cart</button>
+
+                    </div>
+                </div>
+                <div class="singleCard flex gap-3 border p-4 ]	w-[340px] rounded-md" style="box-shadow: 3px 5px 5px gray;">
+                    <div>
+                        <img class="w-[170px] h-full rounded-2xl" src="./images/coxBazar.jpg" alt="">
+                    </div>
+                    <div class="flex flex-col ">
+                        <h2 class="text-2xl font-bold">Cox Bazar
+                        </h2>
+                        <p class="text-xl font-medium">Cost: <span>700</span> $</p>
+                        <button class="card-button btn btn-sm bg-slate-300 font-bold mt-4">Add to Cart</button>
+
+                    </div>
+                </div>
+                <div class="singleCard flex gap-3 border p-4 ]	w-[340px] rounded-md" style="box-shadow: 3px 5px 5px gray;">
+                    <div>
+                        <img class="w-[170px] h-full rounded-2xl" src="./images/coxBazar.jpg" alt="">
+                    </div>
+                    <div class="flex flex-col ">
+                        <h2 class="text-2xl font-bold">Khulna
+                        </h2>
+                        <p class="text-xl font-medium">Cost: <span>200</span> $</p>
+                        <button class="card-button btn btn-sm bg-slate-300 font-bold mt-4">Add to Cart</button>
+
+                    </div>
+                </div>
+
+
+
+            </div>
+            <!-- calculate section  -->
+            <div class="text-[20px] font-semibold text-center w-[60%] mr-[20px] mb-[20px]" style="box-shadow: 2px 5px 5px 5px gray;">
+
+                <p class="text-[30px]">Cart</p>
+                <hr class="h-[2px] bg-gray-300">
+                    <br>
+                <div>
+                    <ul id="selectedItems">
+
+                    </ul>
+                </div>
+                <hr class="h-[2px] bg-gray-300">
+
+                <p>Total Cost: <span id="totalCost">0</span> $</p>
+
+                <div>
+                    <button onclick="modifyPrice('bus')"  class="type btn">Bus +100</button>
+                    <button onclick="modifyPrice('train')" class="type btn">Train -200</button>
+                    <button onclick="modifyPrice('flight')" class="type btn">Flight +500</button>
+
+                </div>
+                <hr class="h-[2px] bg-gray-300 my-5">
+                <p>Grand Total : <span id="grandTotal">0</span> $</p>
+
+            </div>
+        </section>
+
+    </main>
+
+
+    <script src="./js file/script.js"></script>
+    <script src="./js file/function.js"></script>
+
+</body>
+
+</html>
